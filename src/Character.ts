@@ -2,7 +2,7 @@ import Archetype, { Mage } from './Archetypes';
 
 import Energy from './Energy';
 
-import Fighter from './Fighter';
+import Fighter, { SimpleFighter } from './Fighter';
 
 import Race, { Elf } from './Races';
 
@@ -102,7 +102,7 @@ class Character implements Fighter {
     return this.updateLifePoints(totalDamage);
   }
 
-  public attack(enemy: Fighter): void {
+  public attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this.strength);
   }
 
